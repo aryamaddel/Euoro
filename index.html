@@ -68,6 +68,16 @@
         text-align: center;
       }
 
+      /* Background for larger screens */
+      @media (min-width: 1024px) {
+        body {
+          background-image: url("eastman-childs-CEtIM994vaI-unsplash.jpg");
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+        }
+      }
+
       .container {
         max-width: 500px;
         width: 100%;
@@ -86,7 +96,6 @@
         display: inline-block;
       }
 
-      /* Remove blinking cursor by not adding the ::after pseudo-element */
       .tagline {
         font-size: 1.2rem;
         font-weight: 300;
