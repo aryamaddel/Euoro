@@ -3,19 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EUORO - Coming Soon</title>
+    <title>EUORO</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <style>
-      :root {
-        --primary-color: #1a1a2e;
-        --secondary-color: #4a4e69;
-        --accent-color: #22d3ee;
-        --background-color: #f4f4f6;
-      }
-
       * {
         margin: 0;
         padding: 0;
@@ -24,40 +17,40 @@
 
       body {
         font-family: "Inter", sans-serif;
-        background-color: var(--background-color);
-        color: var(--primary-color);
+        background-color: #000;
+        color: #fff;
         line-height: 1.6;
-      }
-
-      .container {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 2rem;
+        min-height: 100vh;
+        padding: 1rem;
         text-align: center;
       }
 
+      .container {
+        max-width: 500px;
+        width: 100%;
+      }
+
       .logo {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        color: var(--primary-color);
+        color: #fff;
         margin-bottom: 1rem;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
+        opacity: 0.9;
       }
 
       .tagline {
-        font-size: 1.25rem;
-        color: var(--secondary-color);
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.7);
         margin-bottom: 2rem;
-        max-width: 350px;
+        line-height: 1.4;
       }
 
       .email-section {
-        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -65,48 +58,41 @@
 
       .email-input {
         width: 100%;
-        padding: 0.875rem;
+        padding: 0.75rem;
         font-size: 1rem;
-        border: 2px solid var(--secondary-color);
-        border-radius: 8px;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
         outline: none;
-        transition: all 0.3s ease;
+        transition: border-color 0.3s ease;
       }
 
       .email-input:focus {
-        border-color: var(--accent-color);
-        box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
       }
 
       .notify-button {
         width: 100%;
-        padding: 0.875rem;
+        padding: 0.75rem;
         font-size: 1rem;
-        font-weight: 600;
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        border-radius: 8px;
+        font-weight: 400;
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
         cursor: pointer;
         transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .notify-button:hover {
-        background-color: var(--secondary-color);
-      }
-
-      .notify-button:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.3);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
       }
 
       @media (max-width: 480px) {
-        .container {
-          padding: 1rem;
-        }
-
         .logo {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
 
         .tagline {
@@ -119,8 +105,7 @@
     <div class="container">
       <div class="logo">EUORO</div>
       <p class="tagline">
-        We're building what should have been the norm years ago. Join us on our
-        journey.
+        Unlimited software tools. Describe your task. We'll find what you need.
       </p>
 
       <form name="email-signup" class="email-section" netlify>
@@ -130,13 +115,10 @@
           name="email"
           class="email-input"
           placeholder="Enter your email"
-          aria-label="Email address"
           required
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         />
-        <button type="submit" class="notify-button" aria-label="Get notified">
-          Get Notified
-        </button>
+        <button type="submit" class="notify-button">Get Notified</button>
       </form>
     </div>
   </body>
