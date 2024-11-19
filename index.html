@@ -117,11 +117,13 @@
         <div class="logo">EUORO</div>
         <p class="tagline">We're building something extraordinary. Join us on our journey.</p>
         
-        <form class="email-section" id="signup-form">
+        <form name="email-signup" method="POST" data-netlify="true" class="email-section">
+            <input type="hidden" name="form-name" value="email-signup" />
             <label for="email" class="visually-hidden">Email address</label>
             <input 
                 type="email" 
                 id="email" 
+                name="email"
                 class="email-input" 
                 placeholder="Enter your email" 
                 aria-label="Email address" 
@@ -137,19 +139,5 @@
             </button>
         </form>
     </div>
-
-    <script>
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email');
-            
-            if (email.validity.valid) {
-                alert('Thank you for signing up! We will contact you soon.');
-                email.value = '';
-            } else {
-                email.reportValidity();
-            }
-        });
-    </script>
 </body>
 </html>
